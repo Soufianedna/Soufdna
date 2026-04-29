@@ -834,24 +834,28 @@ document.querySelectorAll('.article-read').forEach(function(link, i) {
     </div>
     <div class="rev-r">
       <div class="form-row" style="margin-bottom:3px">
-        <div class="form-field"><label class="form-label">Pr&eacute;nom</label><input class="form-input" type="text" placeholder="Ton pr&eacute;nom"></div>
-        <div class="form-field"><label class="form-label">Nom</label><input class="form-input" type="text" placeholder="Ton nom"></div>
-      </div>
-      <div class="form-field"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="ton@email.com"></div>
-      <div class="form-field">
-        <label class="form-label">Sujet</label>
-        <select class="form-select">
-          <option value="">Choisir un sujet&hellip;</option>
-          <option>Collaboration / Partenariat marque</option>
-          <option>Recrutement - WorkinCanada</option>
-          <option>Guide Canada - Question</option>
-          <option>Prise de contact g&eacute;n&eacute;rale</option>
-        </select>
-      </div>
-      <div class="form-field"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Dis-moi tout - ton projet, ta situation, ce dont tu as besoin&hellip;"></textarea></div>
-      <button class="form-submit">Envoyer le message &rarr;</button>
-      <div class="form-note">Je r&eacute;ponds sous 48h &middot; Pas de spam, jamais</div>
-    </div>
+        <form id="cform" style="display:flex;flex-direction:column;gap:3px">
+        <div class="form-row">
+          <div class="form-field"><label class="form-label">Pr&eacute;nom</label><input class="form-input" type="text" name="prenom" placeholder="Ton pr&eacute;nom" required></div>
+          <div class="form-field"><label class="form-label">Nom</label><input class="form-input" type="text" name="nom" placeholder="Ton nom" required></div>
+        </div>
+        <div class="form-field"><label class="form-label">Email</label><input class="form-input" type="email" name="email" placeholder="ton@email.com" required></div>
+        <div class="form-field">
+          <label class="form-label">Sujet</label>
+          <select class="form-select" name="sujet">
+            <option value="">Choisir un sujet&hellip;</option>
+            <option>Collaboration / Partenariat marque</option>
+            <option>Recrutement - WorkinCanada</option>
+            <option>Guide Canada - Question</option>
+            <option>Prise de contact generale</option>
+          </select>
+        </div>
+        <div class="form-field"><label class="form-label">Message</label><textarea class="form-textarea" name="message" placeholder="Dis-moi tout - ton projet, ta situation, ce dont tu as besoin..." required></textarea></div>
+        <button type="submit" class="form-submit" id="submit-btn">Envoyer le message &rarr;</button>
+        <div class="form-note" id="form-note">Je r&eacute;ponds sous 48h &middot; Pas de spam, jamais</div>
+      </form>
+
+
   </div>
 </section>
 
@@ -1071,6 +1075,75 @@ window.addEventListener("DOMContentLoaded", function() {
       var card = document.getElementById('latest-video-card');
       if (card) card.innerHTML = '<div style="padding:20px;text-align:center;font-family:DM Mono,monospace;font-size:9px;color:#5A5A5A;letter-spacing:.1em">Voir la cha&#238;ne YouTube</div>';
     });
+})();
+</script>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var note = document.getElementById('form-note');
+  btn.textContent = 'Envoi en cours...';
+  btn.style.opacity = '0.7';
+  btn.disabled = true;
+
+  fetch('https://formspree.io/f/xjgjnavj', {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r) {
+    if (r.ok) {
+      btn.textContent = 'Message envoyé ! ✓';
+      btn.style.background = '#2a7a2a';
+      btn.style.opacity = '1';
+      note.textContent = 'Merci ! Je te réponds sous 48h.';
+      document.getElementById('contact-form').reset();
+    } else {
+      btn.textContent = 'Erreur - réessaie';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+    }
+  }).catch(function() {
+    btn.textContent = 'Erreur - réessaie';
+    btn.style.opacity = '1';
+    btn.disabled = false;
+  });
+});
+</script>
+
+<script>
+(function(){
+  var form = document.getElementById('cform');
+  if(!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var note = document.getElementById('form-note');
+    btn.textContent = 'Envoi en cours...';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+    fetch('https://formspree.io/f/xjgjnavj', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if(r.ok) {
+        btn.textContent = 'Message envoyé ! ✓';
+        btn.style.background = '#2a7a2a';
+        btn.style.opacity = '1';
+        note.textContent = 'Merci ! Je te réponds sous 48h.';
+        form.reset();
+      } else {
+        btn.textContent = 'Erreur - réessaie';
+        btn.style.opacity = '1';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      btn.textContent = 'Erreur - réessaie';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+    });
+  });
 })();
 </script>
 </body>
@@ -1346,6 +1419,75 @@ footer{border-top:1px solid var(--border);padding:36px 56px;display:flex;justify
       var card = document.getElementById('latest-video-card');
       if (card) card.innerHTML = '<div style="padding:20px;text-align:center;font-family:DM Mono,monospace;font-size:9px;color:#5A5A5A;letter-spacing:.1em">Voir la cha&#238;ne YouTube</div>';
     });
+})();
+</script>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  var note = document.getElementById('form-note');
+  btn.textContent = 'Envoi en cours...';
+  btn.style.opacity = '0.7';
+  btn.disabled = true;
+
+  fetch('https://formspree.io/f/xjgjnavj', {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r) {
+    if (r.ok) {
+      btn.textContent = 'Message envoyé ! ✓';
+      btn.style.background = '#2a7a2a';
+      btn.style.opacity = '1';
+      note.textContent = 'Merci ! Je te réponds sous 48h.';
+      document.getElementById('contact-form').reset();
+    } else {
+      btn.textContent = 'Erreur - réessaie';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+    }
+  }).catch(function() {
+    btn.textContent = 'Erreur - réessaie';
+    btn.style.opacity = '1';
+    btn.disabled = false;
+  });
+});
+</script>
+
+<script>
+(function(){
+  var form = document.getElementById('cform');
+  if(!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var note = document.getElementById('form-note');
+    btn.textContent = 'Envoi en cours...';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+    fetch('https://formspree.io/f/xjgjnavj', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if(r.ok) {
+        btn.textContent = 'Message envoyé ! ✓';
+        btn.style.background = '#2a7a2a';
+        btn.style.opacity = '1';
+        note.textContent = 'Merci ! Je te réponds sous 48h.';
+        form.reset();
+      } else {
+        btn.textContent = 'Erreur - réessaie';
+        btn.style.opacity = '1';
+        btn.disabled = false;
+      }
+    }).catch(function() {
+      btn.textContent = 'Erreur - réessaie';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+    });
+  });
 })();
 </script>
 </body>
