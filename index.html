@@ -1215,4 +1215,38 @@ document.getElementById('cform').addEventListener('submit', function(e) {
   <div id="s-arrival" style="display:none;padding:24px 32px;background:rgba(217,63,46,.06);border:1px solid rgba(217,63,46,.2);border-top:none"><div style="display:flex;gap:28px;align-items:center;max-width:900px"><div style="font-size:40px">&#127809;</div><div><div style="font-family:DM Mono,monospace;font-size:9px;letter-spacing:.25em;color:#D93F2E;text-transform:uppercase;margin-bottom:8px">Atterrissage - Vancouver, BC</div><div style="font-family:Fraunces,serif;font-size:22px;font-weight:700;color:#FAFAF8;margin-bottom:8px">Bienvenue au Canada, Souf.</div></div><a href="#guide" class="btn btn-red" style="flex-shrink:0;white-space:nowrap">Mon guide</a></div></div>
 </section>
 </body>
-</html>
+</html><style>
+@media (max-width: 768px) {
+  #nav { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; padding: 14px 20px !important; z-index: 1000 !important; }
+  .nav-links { display: none !important; }
+  .nav-logo { font-size: 16px !important; }
+  .nav-cta { font-size: 9px !important; padding: 8px 14px !important; }
+  .hero { padding: 100px 20px 60px !important; overflow: hidden !important; }
+  .hero-topbar { display: none !important; }
+  .hero-socials { display: none !important; }
+  .hero-grid { display: none !important; }
+  .hero-title { font-size: 46px !important; line-height: .93 !important; }
+  .hero-title em { margin-left: 16px !important; }
+  .hero-desc { font-size: 15px !important; max-width: 100% !important; margin-top: 18px !important; }
+  .hero-actions { flex-direction: column !important; gap: 10px !important; margin-top: 24px !important; }
+  .hero-actions .btn { width: 100% !important; text-align: center !important; }
+  section, .section { padding: 52px 20px !important; }
+  .s-title { font-size: 30px !important; }
+  #story { padding: 52px 0 0 !important; }
+  #story > .rev { padding: 0 20px !important; }
+  #s-map-wrap { overflow: hidden !important; }
+  .guide-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .yt-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .yt-video-grid { grid-template-columns: 1fr !important; gap: 3px !important; }
+  .workin-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .blog-header { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; }
+  .blog-grid { grid-template-columns: 1fr !important; gap: 3px !important; }
+  .article-title { font-size: 17px !important; }
+  .contact-layout { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .socials-grid { grid-template-columns: 1fr 1fr !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  footer { flex-direction: column !important; gap: 14px !important; text-align: center !important; padding: 24px 20px !important; }
+  .footer-links { flex-wrap: wrap !important; justify-content: center !important; gap: 12px !important; }
+}
+@media (max-width: 400px) { .hero-title { font-size: 36px !important; } }
+</style>
