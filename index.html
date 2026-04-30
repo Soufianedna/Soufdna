@@ -873,7 +873,7 @@ articles[5] = {
 
 
 
-document.querySelectorAll('.article-read').forEach(function(link, i) {
+document.// DISABLED 
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var idx = link.getAttribute('data-article') ? parseInt(link.getAttribute('data-article')) : i+1;
