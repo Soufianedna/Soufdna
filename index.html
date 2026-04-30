@@ -873,29 +873,7 @@ articles[5] = {
 
 
 
-document.// DISABLED 
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    var idx = link.getAttribute('data-article') ? parseInt(link.getAttribute('data-article')) : i+1;
-    var art = articles[idx];
-    if (!art) return;
-    var modal = document.getElementById('article-modal');
-    var content = document.getElementById('article-content');
-    content.innerHTML = `
-      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.25em;color:#D93F2E;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px">
-        <span style="width:20px;height:1px;background:#D93F2E;display:inline-block"></span>${art.cat}
-      </div>
-      <h2 style="font-family:'Fraunces',serif;font-size:clamp(24px,4vw,40px);font-weight:700;color:#FAFAF8;line-height:1.1;margin-bottom:24px">${art.title}</h2>
-      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;color:#5A5A5A;text-transform:uppercase;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.07)">${art.date} &middot; Souf DNA &middot; Vancouver</div>
-      <div style="font-size:17px;line-height:1.9;color:rgba(244,239,230,.75)">${art.content}</div>
-      <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:16px">
-        <a href="#guide" onclick="document.getElementById('article-modal').style.display='none'" class="btn btn-red">Voir le guide complet &rarr;</a>
-      </div>
-    `;
-    modal.style.display = 'block';
-    modal.scrollTop = 0;
-  });
-});
+
 </script>
 
 <!-- CONTACT -->
