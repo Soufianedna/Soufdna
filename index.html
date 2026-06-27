@@ -1359,5 +1359,30 @@ document.getElementById('cform').addEventListener('submit', function(e) {
 
   <div id="s-arrival" style="display:none;padding:24px 32px;background:rgba(217,63,46,.06);border:1px solid rgba(217,63,46,.2);border-top:none"><div style="display:flex;gap:28px;align-items:center;max-width:900px"><div style="font-size:40px">&#127809;</div><div><div style="font-family:DM Mono,monospace;font-size:9px;letter-spacing:.25em;color:#D93F2E;text-transform:uppercase;margin-bottom:8px">Atterrissage - Vancouver, BC</div><div style="font-family:Fraunces,serif;font-size:22px;font-weight:700;color:#FAFAF8;margin-bottom:8px">Bienvenue au Canada, Souf.</div></div><a href="#guide" class="btn btn-red" style="flex-shrink:0;white-space:nowrap">Mon guide</a></div></div>
 </section>
+
+<!-- POPUP CONCOURS -->
+<div id="popup-concours" style="display:none;position:fixed;inset:0;background:rgba(11,11,11,.85);z-index:9999;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#0B0B0B;border:1px solid rgba(217,63,46,.3);max-width:480px;width:100%;position:relative">
+    <button onclick="closePopup()" style="position:absolute;top:16px;right:16px;background:transparent;border:none;color:rgba(250,250,248,.4);font-size:20px;cursor:pointer">&times;</button>
+    <div style="padding:40px">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#D93F2E;margin-bottom:16px;display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;background:#D93F2E;border-radius:50%;display:inline-block"></span>Concours — Cloture le 12 juillet</div>
+      <div style="font-family:'Fraunces',serif;font-size:36px;line-height:.92;letter-spacing:-1px;margin-bottom:20px;color:#FAFAF8">Gagne une montre<br><em style="font-style:italic;color:#D93F2E">Atom 800 euros.</em></div>
+      <p style="font-family:'DM Mono',monospace;font-size:11px;line-height:1.8;color:rgba(250,250,248,.5);margin-bottom:32px">Devine qui va gagner la Coupe du Monde 2026. Mouvement suisse, assemblee en France.</p>
+      <a href="/concours.html" style="display:block;background:#D93F2E;color:#FAFAF8;text-align:center;padding:16px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none">Je participe</a>
+      <div onclick="closePopup()" style="text-align:center;margin-top:16px;font-family:'DM Mono',monospace;font-size:9px;color:rgba(250,250,248,.3);cursor:pointer;text-transform:uppercase">Non merci</div>
+    </div>
+  </div>
+</div>
+<script>
+  setTimeout(function() {
+    if (!sessionStorage.getItem('popup-closed')) {
+      document.getElementById('popup-concours').style.display = 'flex';
+    }
+  }, 3000);
+  function closePopup() {
+    document.getElementById('popup-concours').style.display = 'none';
+    sessionStorage.setItem('popup-closed', '1');
+  }
+</script>
 </body>
 </html>
