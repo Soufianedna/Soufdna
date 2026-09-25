@@ -7,92 +7,78 @@
 <meta name="description" content="27 actions concrètes à cocher pour préparer ton départ et ton installation au Canada. Gratuit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Mono:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    box-sizing:border-box;
-    padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px);
-    --creme:#F5F3EE; --encre:#101820; --noir:#111111; --rouge:#D71920; --gris:#737373;
-    --filet:#DBD6CB; --fond:#F5F3EE; --texte:#111111; --carte:#FFFFFF;
-  }
-  :root:not([data-theme="light"]){}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){ --fond:#0C1318; --texte:#F2EFE9; --carte:#141C23; --filet:#26313A; --gris:#9AA4AC; }
-  }
-  :root[data-theme="dark"]{ --fond:#0C1318; --texte:#F2EFE9; --carte:#141C23; --filet:#26313A; --gris:#9AA4AC; }
-  *,*::before,*::after{box-sizing:inherit}
-  html{scroll-padding-top:env(safe-area-inset-top,0px); -webkit-text-size-adjust:100%}
-  body{
-    margin:0; background:var(--fond); color:var(--texte);
-    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    font-size:17px; line-height:1.6;
-  }
-  img{max-width:100%; height:auto; display:block}
-  .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
-  .serif{font-family:Lora,Georgia,serif}
-
-  /* ---------- bandeau haut ---------- */
-  header{border-bottom:1px solid var(--filet)}
-  .bar{display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:12px; letter-spacing:.18em; font-weight:700}
-  .bar .ed{color:var(--gris); font-weight:500}
-
-  /* ---------- héros ---------- */
-  .hero{background:var(--encre); color:#fff; padding:64px 0 72px}
-  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center}
-  .kicker{font-size:12px; letter-spacing:.22em; font-weight:700; color:var(--rouge); margin:0 0 18px}
-  h1{font-size:clamp(34px,5vw,58px); line-height:1.02; margin:0 0 20px; font-weight:900; letter-spacing:-.02em}
-  h1 em{font-style:normal; color:var(--rouge)}
-  .sous{font-size:19px; color:#D9D4CC; margin:0 0 28px; max-width:30em}
-  .rule{width:64px; height:3px; background:var(--rouge); margin:0 0 26px}
-  .cover{box-shadow:0 30px 60px rgba(0,0,0,.45); border-radius:2px}
-
-  /* ---------- formulaire ---------- */
-  .form{background:var(--carte); color:var(--texte); border:1px solid var(--filet); border-radius:4px; padding:26px; max-width:460px}
-  .form h2{font-size:17px; margin:0 0 6px; letter-spacing:.02em}
-  .form p.mini{font-size:13px; color:var(--gris); margin:0 0 18px}
-  .form label{display:block; font-size:12px; letter-spacing:.12em; font-weight:700; color:var(--gris); margin:14px 0 6px}
-  .form input{width:100%; padding:13px 14px; font-size:16px; font-family:inherit; color:var(--texte);
-    background:transparent; border:1px solid var(--filet); border-radius:3px}
-  .form input:focus{outline:2px solid var(--rouge); outline-offset:1px; border-color:transparent}
-  .cta{display:block; width:100%; margin-top:20px; padding:16px; background:var(--rouge); color:#fff;
-    border:0; border-radius:3px; font-family:inherit; font-size:15px; font-weight:700; letter-spacing:.1em; cursor:pointer}
-  .cta:hover{background:#B5141B}
-  .rgpd{font-size:11.5px; color:var(--gris); margin:14px 0 0; line-height:1.5}
-
-  /* ---------- sections ---------- */
-  section{padding:70px 0}
-  .stitre{font-size:12px; letter-spacing:.22em; font-weight:700; color:var(--rouge); margin:0 0 14px}
-  h2.grand{font-size:clamp(26px,3.4vw,38px); line-height:1.1; margin:0 0 22px; font-weight:900; letter-spacing:-.015em}
-  .deux{display:grid; grid-template-columns:1fr 1fr; gap:48px}
-  .liste{list-style:none; padding:0; margin:0}
-  .liste li{padding:14px 0 14px 34px; border-bottom:1px solid var(--filet); position:relative; font-size:16.5px}
-  .liste li::before{content:"□"; position:absolute; left:0; top:12px; color:var(--rouge); font-size:18px}
-  .num{display:flex; gap:18px; margin:0 0 22px}
-  .num b{color:var(--rouge); font-size:15px; letter-spacing:.06em; min-width:26px}
-  .quote{background:var(--encre); color:#fff; padding:48px 0}
-  .quote p{font-size:clamp(20px,2.6vw,27px); line-height:1.35; margin:0; max-width:24em}
-  .quote span{display:block; margin-top:18px; font-size:12px; letter-spacing:.2em; color:#9AA4AC}
-  .faq dt{font-weight:700; margin:22px 0 6px; font-size:16.5px}
-  .faq dd{margin:0; color:var(--gris); font-size:16px}
-  footer{border-top:1px solid var(--filet); padding:28px 0 40px; font-size:12px; color:var(--gris); letter-spacing:.08em}
-  .planche{border:1px solid var(--filet); border-radius:3px}
-  @media (max-width:860px){
-    .hero-grid,.deux{grid-template-columns:1fr; gap:34px}
-    .hero{padding:44px 0 52px}
-    section{padding:52px 0}
-    .form{max-width:none}
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--encre:#101820;--creme:#F5F3EE;--blanc:#FFFFFF;--noir:#111111;--rouge:#D71920;--rouge2:#B5141B;--gris:#737373;--filet:#DBD6CB;--filetf:rgba(245,243,238,.10);--txtf:rgba(245,243,238,.68);--carte:#FFFFFF}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--creme);color:var(--noir);font-family:'Lora',serif;font-size:17px;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 56px}
+nav{position:sticky;top:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:22px 56px;padding-top:calc(22px + env(safe-area-inset-top,0px));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(16,24,32,.94);border-bottom:1px solid var(--filetf)}
+.nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--creme)}
+.nav-logo span,.footer-logo span{color:var(--rouge)}
+.nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:10px 22px;background:var(--rouge);color:#fff;text-decoration:none;transition:background .25s}
+.nav-cta:hover{background:var(--rouge2)}
+.hero{position:relative;overflow:hidden;padding:100px 0 100px;background:var(--encre);color:var(--creme)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 78% 35%,rgba(215,25,32,.10) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,243,238,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.03) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.kicker,.stitre{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--rouge);text-transform:uppercase;margin:0 0 22px;display:flex;align-items:center;gap:14px}
+.kicker::before,.stitre::before{content:'';width:32px;height:1px;background:var(--rouge)}
+h1{font-family:'Fraunces',serif;font-size:clamp(46px,7vw,100px);font-weight:700;line-height:.92;letter-spacing:-.03em;color:var(--creme);margin:0 0 30px}
+h1 em{font-style:italic;font-weight:300;color:var(--rouge)}
+.rule{display:none}
+.sous{font-size:17px;line-height:1.75;color:var(--txtf);max-width:520px;margin:0 0 40px}
+.cover{box-shadow:0 30px 70px rgba(0,0,0,.45);max-width:420px}
+.form{background:var(--blanc);color:var(--noir);padding:40px 36px;border-top:3px solid var(--rouge)}
+.form h2{font-family:'Fraunces',serif;font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0 0 10px;color:var(--encre)}
+.form .mini{font-size:15px;color:#4A4A4A;margin:0 0 26px}
+.cta{font-style:normal;display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:18px 36px;background:var(--rouge);color:#fff;text-decoration:none;text-align:center;border:1px solid var(--rouge);transition:background .25s,transform .25s}
+.cta:hover{background:var(--rouge2);transform:translateY(-2px)}
+.rgpd{font-size:13px;line-height:1.6;color:var(--gris);margin:18px 0 0}
+section{padding:110px 0}
+h2.grand{font-family:'Fraunces',serif;font-size:clamp(34px,4.6vw,60px);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:var(--encre);margin:0 0 24px;max-width:15em}
+p{color:#4A4A4A}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.liste{list-style:none;display:flex;flex-direction:column;gap:3px}
+.liste li{background:var(--blanc);border:1px solid var(--filet);border-left:2px solid var(--rouge);padding:18px 22px;font-size:15.5px;color:#4A4A4A}
+.liste li b{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--rouge);font-weight:400;text-transform:uppercase;margin-bottom:4px}
+.quote{background:var(--encre);padding:90px 0}
+.quote p{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.25;color:var(--creme);max-width:22em;margin:0}
+.quote span{display:block;margin-top:24px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--rouge)}
+.planche{border:1px solid var(--filet);margin-top:30px}
+.num{display:flex;gap:20px;background:var(--creme);border:1px solid var(--filet);padding:22px 24px;margin-bottom:3px}
+.num > b{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--rouge);font-weight:400;min-width:24px}
+.num div b{font-family:'Fraunces',serif;font-size:19px;color:var(--encre)}
+.num span{font-size:15px;line-height:1.6}
+.faq dl{border-top:1px solid var(--filet)}
+.faq dt{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--encre);padding:22px 0 6px}
+.faq dd{font-size:15.5px;line-height:1.75;color:#4A4A4A;padding:0 0 22px;border-bottom:1px solid var(--filet)}
+footer{background:var(--encre);padding:36px 56px;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--creme)}
+.footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+.footer-links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;color:rgba(245,243,238,.5);text-decoration:none;text-transform:uppercase}
+.footer-links a:hover{color:var(--rouge)}
+.footer-copy{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:rgba(245,243,238,.3);text-transform:uppercase}
+@media (max-width:860px){
+ .wrap{padding:0 22px}
+ nav{padding:16px 22px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+ .hero{padding:64px 0 70px}
+ .hero-grid,.deux{grid-template-columns:1fr;gap:40px}
+ section{padding:72px 0}
+ .form{padding:30px 24px}
+ footer{padding:30px 22px;flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
-    <span>SOUF DNA</span>
-    <span class="ed">ÉDITION 2026</span>
-  </div>
-</header>
+<nav>
+  <span class="nav-logo">SOUF <span>DNA</span></span>
+  <a href="https://pack.soufdna.com/checklist" class="nav-cta">Recevoir la checklist</a>
+</nav>
 
 <div class="hero">
   <div class="wrap hero-grid">
@@ -121,12 +107,12 @@
       <p style="color:var(--gris); max-width:28em">Pas un ebook de plus. Une liste d'actions, dans l'ordre, que tu coches au fur et à mesure — à l'écran ou au stylo.</p>
     </div>
     <ul class="liste">
-      <li><b>01 · Ton projet</b> — objectif, province, période de départ</li>
-      <li><b>02 · Ton argent</b> — installation, coût de vie, réserve</li>
-      <li><b>03 · Ton emploi</b> — CV canadien, LinkedIn, entreprises cibles</li>
-      <li><b>04 · Tes documents</b> — passeport, diplômes, références</li>
-      <li><b>05 · Ton départ</b> — logement temporaire, assurance, argent</li>
-      <li><b>06 · Ton arrivée</b> — démarches, quartiers, plan des 30 jours</li>
+      <li><b>01 · Ton projet</b>objectif, province, période de départ</li>
+      <li><b>02 · Ton argent</b>installation, coût de vie, réserve</li>
+      <li><b>03 · Ton emploi</b>CV canadien, LinkedIn, entreprises cibles</li>
+      <li><b>04 · Tes documents</b>passeport, diplômes, références</li>
+      <li><b>05 · Ton départ</b>logement temporaire, assurance, argent</li>
+      <li><b>06 · Ton arrivée</b>démarches, quartiers, plan des 30 jours</li>
     </ul>
   </div>
 </section>
@@ -146,7 +132,7 @@
   </div>
 </section>
 
-<section style="background:var(--carte); border-top:1px solid var(--filet); border-bottom:1px solid var(--filet)">
+<section style="background:var(--blanc); border-top:1px solid var(--filet); border-bottom:1px solid var(--filet)">
   <div class="wrap deux">
     <div>
       <p class="stitre">POURQUOI CELLE-CI</p>
@@ -172,17 +158,19 @@
 
 <section>
   <div class="wrap" style="text-align:center">
-    <h2 class="grand" style="margin-bottom:10px">Commence aujourd'hui.</h2>
-    <p style="color:var(--gris); margin:0 auto 26px; max-width:30em">Tu n'as pas besoin de tout savoir avant de partir. Tu as besoin de savoir où tu en es, ce qu'il te manque, et quelle est ta prochaine action.</p>
-    <a href="https://pack.soufdna.com/checklist" class="cta" style="display:inline-block; width:auto; padding:16px 40px; text-decoration:none">RECEVOIR LA CHECKLIST</a>
+    <h2 class="grand" style="margin:0 auto 14px">Commence aujourd'hui.</h2>
+    <p style="margin:0 auto 30px; max-width:30em">Tu n'as pas besoin de tout savoir avant de partir. Tu as besoin de savoir où tu en es, ce qu'il te manque, et quelle est ta prochaine action.</p>
+    <a href="https://pack.soufdna.com/checklist" class="cta" style="display:inline-block">RECEVOIR LA CHECKLIST</a>
   </div>
 </section>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
-    <span>SOUF DNA · PRÉPARATION · DÉPART · INSTALLATION</span>
-    <span>WWW.SOUFDNA.COM</span>
-  </div>
+  <span class="footer-logo">SOUF <span>DNA</span></span>
+  <ul class="footer-links">
+    <li><a href="/mentions-legales" target="_blank" rel="noopener">Mentions légales</a></li>
+    <li><a href="/confidentialite" target="_blank" rel="noopener">Confidentialité</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 SOUF DNA CORP</span>
 </footer>
 
 </body>
