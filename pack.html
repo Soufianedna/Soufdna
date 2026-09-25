@@ -7,90 +7,117 @@
 <meta name="description" content="Dix ressources pour préparer ton départ au Canada : calculateur budget, CV canadien, kit LinkedIn, tracker, kit logement, plans jour par jour. Et en bonus, le guide Vivre au Canada.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Mono:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    box-sizing:border-box;
-    padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px);
-    --encre:#101820; --rouge:#D71920; --gris:#737373; --filet:#DBD6CB;
-    --fond:#F5F3EE; --texte:#111111; --carte:#FFFFFF;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){ --fond:#0C1318; --texte:#F2EFE9; --carte:#141C23; --filet:#26313A; --gris:#9AA4AC; }
-  }
-  :root[data-theme="dark"]{ --fond:#0C1318; --texte:#F2EFE9; --carte:#141C23; --filet:#26313A; --gris:#9AA4AC; }
-  *,*::before,*::after{box-sizing:inherit}
-  html{scroll-padding-top:env(safe-area-inset-top,0px); -webkit-text-size-adjust:100%}
-  body{margin:0; background:var(--fond); color:var(--texte);
-    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    font-size:17px; line-height:1.62}
-  img{max-width:100%; height:auto; display:block}
-  .wrap{max-width:1020px; margin:0 auto; padding:0 24px}
-  .serif{font-family:Lora,Georgia,serif}
-  header{border-bottom:1px solid var(--filet)}
-  .bar{display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:12px; letter-spacing:.18em; font-weight:700}
-  .bar .ed{color:var(--gris); font-weight:500}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0B0B0B;--black2:#111;--card:#161616;--red:#D93F2E;--red2:#F04E3C;--cream:#F4EFE6;--white:#FAFAF8;--mid:#5A5A5A;--dim:#2E2E2E;--border:rgba(255,255,255,0.07);--txt:rgba(244,239,230,.62)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--white);font-family:'Lora',serif;font-size:17px;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 56px}
+.serif{font-family:'Fraunces',serif}
+nav{position:sticky;top:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:22px 56px;padding-top:calc(22px + env(safe-area-inset-top,0px));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(11,11,11,.88);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--white);text-decoration:none}
+.nav-logo span,.footer-logo span{color:var(--red)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--mid);text-decoration:none;text-transform:uppercase;transition:color .25s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:10px 22px;background:var(--red);color:var(--white);text-decoration:none;transition:background .25s}
+.nav-cta:hover{background:var(--red2)}
 
-  .hero{background:var(--encre); color:#fff; padding:66px 0 60px}
-  .kicker{font-size:12px; letter-spacing:.22em; font-weight:700; color:var(--rouge); margin:0 0 18px}
-  h1{font-size:clamp(32px,4.6vw,54px); line-height:1.04; margin:0 0 22px; font-weight:900; letter-spacing:-.02em; max-width:16em}
-  h1 em{font-style:normal; color:var(--rouge)}
-  .sous{font-size:19px; color:#D9D4CC; margin:0 0 30px; max-width:34em}
-  .prixbloc{display:flex; align-items:baseline; gap:16px; margin:0 0 22px; flex-wrap:wrap}
-  .prix{font-size:52px; font-weight:900; letter-spacing:-.03em}
-  .prixnote{font-size:14px; color:#9AA4AC; letter-spacing:.08em}
-  .cta{display:inline-block; padding:18px 44px; background:var(--rouge); color:#fff; text-decoration:none;
-    border-radius:3px; font-size:15px; font-weight:700; letter-spacing:.12em}
-  .cta:hover{background:#B5141B}
-  .ctanote{font-size:13px; color:#9AA4AC; margin:14px 0 0}
+.hero{position:relative;overflow:hidden;padding:120px 0 100px;border-bottom:1px solid var(--border)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 78% 35%,rgba(217,63,46,.08) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 8% 85%,rgba(217,63,46,.04) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.kicker,.stitre{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin:0 0 22px;display:flex;align-items:center;gap:14px}
+.kicker::before,.stitre::before{content:'';width:32px;height:1px;background:var(--red)}
+h1{font-family:'Fraunces',serif;font-size:clamp(46px,7.5vw,112px);font-weight:700;line-height:.92;letter-spacing:-.03em;color:var(--white);margin:0 0 36px}
+h1 em{font-style:italic;font-weight:300;color:var(--red);display:inline-block;margin-left:clamp(20px,6vw,90px)}
+.sous{font-size:17px;line-height:1.75;color:var(--txt);max-width:520px;margin:0 0 40px}
+.prixbloc{display:flex;align-items:baseline;gap:18px;margin:0 0 26px;flex-wrap:wrap}
+.prix{font-family:'Fraunces',serif;font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.prixnote,.ctanote{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--mid);text-transform:uppercase}
+.cta{font-style:normal;display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:18px 36px;background:var(--red);color:var(--white);text-decoration:none;border:1px solid var(--red);transition:background .25s,transform .25s}
+.cta:hover{background:var(--red2);transform:translateY(-2px)}
+.ctanote{margin:18px 0 0}
 
-  section{padding:70px 0}
-  .stitre{font-size:12px; letter-spacing:.22em; font-weight:700; color:var(--rouge); margin:0 0 14px}
-  h2{font-size:clamp(26px,3.3vw,38px); line-height:1.12; margin:0 0 20px; font-weight:900; letter-spacing:-.015em; max-width:17em}
-  h3{font-size:19px; margin:0 0 8px; font-weight:700}
-  .deux{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start}
-  .gris{color:var(--gris)}
-  .res{display:grid; grid-template-columns:repeat(2,1fr); gap:0 44px}
-  .res .item{padding:20px 0; border-bottom:1px solid var(--filet)}
-  .res .n{font-size:13px; font-weight:700; color:var(--rouge); letter-spacing:.1em}
-  .res h4{margin:6px 0 6px; font-size:17.5px; font-weight:700}
-  .res p{margin:0; font-size:15.5px; color:var(--gris)}
-  .shot{border:1px solid var(--filet); border-radius:3px; margin-top:18px}
-  .bande{background:var(--encre); color:#fff; padding:52px 0}
-  .bande p{font-size:clamp(20px,2.5vw,27px); line-height:1.36; margin:0; max-width:24em}
-  .bande span{display:block; margin-top:18px; font-size:12px; letter-spacing:.2em; color:#9AA4AC}
-  .cols{display:grid; grid-template-columns:1fr 1fr; gap:40px}
-  .carte{background:var(--carte); border:1px solid var(--filet); border-radius:4px; padding:26px}
-  .carte ul{margin:12px 0 0; padding-left:20px}
-  .carte li{margin:8px 0; font-size:16px}
-  .avant{border-left:3px solid var(--filet); padding-left:18px; margin:0 0 26px}
-  .avant b{display:block; font-size:15px; color:var(--gris); letter-spacing:.06em}
-  .apres{border-left:3px solid var(--rouge); padding-left:18px; margin:0 0 26px}
-  .bonus{margin-top:44px; background:var(--encre); color:#fff; border-radius:4px; padding:34px 36px; display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center}
-  .bonus .tag{font-size:12px; letter-spacing:.22em; font-weight:700; color:var(--rouge); margin:0 0 10px}
-  .bonus h3{font-size:24px; margin:0 0 10px; color:#fff}
-  .bonus p{margin:0; color:#D9D4CC; font-size:16px}
-  .bonus .pages{font-size:64px; font-weight:900; letter-spacing:-.04em; line-height:1; color:#fff}
-  .bonus .pages small{display:block; font-size:12px; letter-spacing:.2em; color:#9AA4AC; font-weight:700; margin-top:6px}
-  @media (max-width:860px){ .bonus{grid-template-columns:1fr; padding:28px 24px} }
-  .faq dt{font-weight:700; margin:24px 0 6px; font-size:17px}
-  .faq dd{margin:0; color:var(--gris); font-size:16px}
-  .achat{background:var(--carte); border:1px solid var(--filet); border-radius:4px; padding:36px; text-align:center}
-  .achat .prix{color:var(--texte); font-size:46px}
-  footer{border-top:1px solid var(--filet); padding:26px 0 44px; font-size:12px; color:var(--gris); letter-spacing:.08em}
-  .legal{font-size:12.5px; color:var(--gris); line-height:1.5; max-width:52em}
-  @media (max-width:860px){
-    .deux,.cols,.res{grid-template-columns:1fr; gap:28px}
-    .hero{padding:46px 0 48px}
-    section{padding:52px 0}
-    .cta{display:block; text-align:center; padding:18px}
-  }
+section{padding:110px 0}
+h2{font-family:'Fraunces',serif;font-size:clamp(34px,4.6vw,60px);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:var(--white);margin:0 0 26px;max-width:15em}
+h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:0 0 8px;color:var(--white)}
+p{color:var(--txt);margin:0 0 16px}
+.gris{color:var(--txt)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.avant{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--red);padding:22px 26px;margin:0 0 3px;font-size:15px;line-height:1.65;color:var(--txt)}
+.avant b{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--red);font-weight:400;margin-bottom:8px}
+
+.res{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:50px}
+.res .item{background:var(--card);border:1px solid var(--border);padding:28px 30px;position:relative;overflow:hidden;transition:border-color .3s,background .3s}
+.res .item::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.23,1,.32,1)}
+.res .item:hover{border-color:rgba(217,63,46,.3);background:#1c1c1c}
+.res .item:hover::after{transform:scaleY(1)}
+.res .n{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--red)}
+.res h4{font-family:'Fraunces',serif;font-size:21px;font-weight:700;margin:10px 0 8px;color:var(--white)}
+.res p{margin:0;font-size:14.5px;line-height:1.65}
+
+.bonus{margin-top:3px;background:linear-gradient(135deg,#1c0d0a,#161616 60%);border:1px solid rgba(217,63,46,.3);padding:36px 40px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+.bonus .tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--red);margin:0 0 10px}
+.bonus h3{font-size:clamp(24px,2.6vw,32px);font-weight:700;margin:0 0 12px}
+.bonus p{margin:0;font-size:15.5px}
+.bonus .pages{font-family:'Fraunces',serif;font-size:84px;font-weight:700;letter-spacing:-.05em;line-height:.9;color:var(--white)}
+.bonus .pages small{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--red);font-weight:400;margin-top:10px}
+
+.shot{border:1px solid rgba(217,63,46,.2);margin-top:18px}
+.bande{background:var(--black2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:90px 0}
+.bande p{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.25;color:var(--cream);max-width:22em;margin:0}
+.bande span{display:block;margin-top:24px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--red)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.carte{background:var(--card);border:1px solid var(--border);padding:34px}
+.carte ul{list-style:none;margin:6px 0 0}
+.carte li{font-size:15.5px;line-height:1.6;color:var(--txt);padding:10px 0 10px 22px;position:relative;border-bottom:1px solid var(--border)}
+.carte li:last-child{border-bottom:none}
+.carte li::before{content:'—';position:absolute;left:0;color:var(--red)}
+.legal{font-size:14px;line-height:1.7;color:rgba(244,239,230,.45);max-width:52em}
+.legal b{color:var(--cream)}
+.achat{background:var(--card);border:1px solid rgba(217,63,46,.3);padding:56px 40px;text-align:center}
+.achat .stitre{justify-content:center}
+.achat .prix{font-size:84px;margin-bottom:6px}
+.faq dl{margin-top:30px;border-top:1px solid var(--border)}
+.faq dt{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--white);padding:26px 0 8px}
+.faq dd{font-size:15.5px;line-height:1.75;color:var(--txt);padding:0 0 26px;border-bottom:1px solid var(--border);max-width:44em}
+a{color:var(--white)}
+footer{border-top:1px solid var(--border);padding:36px 56px;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--white);text-decoration:none}
+.footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+.footer-links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--mid);text-decoration:none;text-transform:uppercase;transition:color .25s}
+.footer-links a:hover{color:var(--red)}
+.footer-copy{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase}
+@media (max-width:860px){
+ .wrap{padding:0 22px}
+ nav{padding:16px 22px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+ .nav-links{display:none}
+ .hero{padding:80px 0 70px}
+ section{padding:72px 0}
+ .deux,.cols,.res{grid-template-columns:1fr;gap:3px}
+ .deux{gap:40px}
+ .bonus{grid-template-columns:1fr;gap:18px;padding:28px 24px}
+ .cta{display:block;text-align:center}
+ footer{padding:30px 22px;flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
 
-<header><div class="wrap bar"><span>SOUF DNA</span><span class="ed">CANADA ACTION PACK · ÉDITION 2026</span></div></header>
+<nav>
+  <a href="/" class="nav-logo">SOUF <span>DNA</span></a>
+  <ul class="nav-links">
+    <li><a href="/#youtube">YouTube</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/bons-plans.html">Bons Plans</a></li>
+    <li><a href="/#communaute">Communauté</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="https://pack.soufdna.com/commande" class="nav-cta">Le pack · 79 €</a>
+</nav>
 
 <div class="hero">
   <div class="wrap">
@@ -157,7 +184,7 @@
   </div>
 </section>
 
-<section style="background:var(--carte); border-top:1px solid var(--filet); border-bottom:1px solid var(--filet)">
+<section style="background:var(--black2); border-top:1px solid var(--border); border-bottom:1px solid var(--border)">
   <div class="wrap">
     <p class="stitre">À QUOI ÇA RESSEMBLE</p>
     <h2>Des outils qui calculent, pas des pages à lire.</h2>
@@ -212,7 +239,7 @@
       <div class="prix">79 €</div>
       <p class="gris" style="margin:6px 0 24px">Paiement unique. Accès immédiat. Dix ressources à télécharger et à garder, et le guide Vivre au Canada en bonus.</p>
       <a class="cta" href="https://pack.soufdna.com/commande">JE PRENDS LE PACK</a>
-      <p class="gris" style="font-size:13px; margin:16px 0 0">Paiement sécurisé par Stripe · SOUF DNA CORP</p>
+      <p class="ctanote" style="margin:18px 0 0">Paiement sécurisé par Stripe · SOUF DNA CORP</p>
     </div>
   </div>
 </section>
@@ -233,7 +260,7 @@
       <dt>Comment je reçois le pack ?</dt>
       <dd>Immédiatement après le paiement, tu reçois par courriel tes accès à ton espace personnel. Tu y télécharges chaque ressource, en PDF, Word ou Excel, et tu la gardes. Les fichiers s'ouvrent dans Word, Pages, Google Docs ou Google Sheets.</dd>
       <dt>Et si ça ne me convient pas ?</dt>
-      <dd>Le pack est un contenu numérique, accessible dès le paiement : il n'est pas remboursable une fois l'accès ouvert. C'est pour ça que cette page détaille tout ce qu'il contient avant ton achat. Une question avant de te décider ? Écris-moi à <a href="mailto:contact@soufdna.com" style="color:inherit">contact@soufdna.com</a>.</dd>
+      <dd>Le pack est un contenu numérique, accessible dès le paiement : il n'est pas remboursable une fois l'accès ouvert. C'est pour ça que cette page détaille tout ce qu'il contient avant ton achat. Une question avant de te décider ? Écris-moi à <a href="mailto:contact@soufdna.com">contact@soufdna.com</a>.</dd>
     </dl>
   </div>
 </section>
@@ -247,10 +274,13 @@
 </div>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
-    <span>SOUF DNA CORP · CANADA ACTION PACK · ÉDITION 2026</span>
-    <span><a href="/cgv" style="color:inherit">CGV</a> · <a href="/mentions-legales" style="color:inherit">MENTIONS LÉGALES</a> · <a href="/confidentialite" style="color:inherit">CONFIDENTIALITÉ</a></span>
-  </div>
+  <a href="/" class="footer-logo">SOUF <span>DNA</span></a>
+  <ul class="footer-links">
+    <li><a href="/cgv">CGV</a></li>
+    <li><a href="/mentions-legales">Mentions légales</a></li>
+    <li><a href="/confidentialite">Confidentialité</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 SOUF DNA CORP</span>
 </footer>
 
 </body>
