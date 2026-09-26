@@ -237,7 +237,39 @@ footer{border-top:1px solid var(--border);padding:36px 56px;display:flex;justify
 .hm-pulse{animation:hmPulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes hmPulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(3.2);opacity:0}}
 @media (max-width:1250px){.hero-map{width:46vw;right:70px}.hero-map.on{opacity:.45}}
-@media (max-width:860px){.hero-map{top:80px;right:-10%;width:95%;bottom:auto;height:60vh}.hero-map.on{opacity:.3}}
+@media (max-width:860px){.hero-map{top:90px;left:0;right:0;width:100%;bottom:auto;height:55vh}.hero-map.on{opacity:.28}}
+
+/* MOBILE */
+@media (max-width:860px){
+ html,body{overflow-x:hidden;max-width:100%}
+ body{cursor:auto}
+ #cur,#cur-ring{display:none}
+ nav,nav.scrolled{padding:14px 20px}
+ .nav-links{display:none}
+ .nav-logo{white-space:nowrap;font-size:18px}
+ .nav-cta{padding:9px 14px;font-size:9px}
+ .hero{min-height:auto;padding:130px 22px 64px}
+ .hero-topbar{left:22px;right:22px;top:84px}
+ .hero-stats,.hero-socials{display:none}
+ .hero-title{font-size:clamp(46px,13.5vw,72px)}
+ .hero-title em{margin-left:22px}
+ .hero-desc{font-size:16px;max-width:100%}
+ .hero-actions{flex-wrap:wrap}
+ .section{padding:72px 22px}
+ #story{padding:72px 22px 0 !important}
+ .s-title{font-size:clamp(34px,10vw,48px)}
+ .guide-layout,.yt-layout,.workin-layout,.contact-layout{grid-template-columns:1fr;gap:40px;margin-top:40px}
+ .blog-grid{grid-template-columns:1fr}
+ .blog-header{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:36px}
+ .form-row,.socials-grid{grid-template-columns:1fr}
+ [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+ .yt-stat-row{flex-wrap:wrap;gap:18px}
+ .tier{padding:24px 22px}
+ .tier-head{gap:12px;align-items:flex-start}
+ .workin-cta-box{padding:28px 22px}
+ footer{flex-direction:column;align-items:flex-start;gap:20px;padding:30px 22px}
+ .footer-links{flex-wrap:wrap;gap:16px}
+}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 </style>
 </head>
