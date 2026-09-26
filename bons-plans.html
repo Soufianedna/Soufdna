@@ -4,142 +4,147 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bons Plans Canada — Souf DNA</title>
-<meta name="description" content="Tous mes bons plans pour s'installer au Canada : guide, assurance, eSIM, coaching réseaux sociaux.">
+<meta name="description" content="Tous mes bons plans pour s'installer au Canada : checklist gratuite, Canada Action Pack, assurance, eSIM, coaching réseaux sociaux.">
 <link rel="canonical" href="https://www.soufdna.com/bons-plans.html">
 <meta property="og:title" content="Bons Plans Canada — Souf DNA">
-<meta property="og:description" content="Guide, assurance, eSIM Holafly, coaching réseaux — tout ce qu'il te faut pour t'installer au Canada.">
+<meta property="og:description" content="Checklist, Canada Action Pack, assurance, eSIM Holafly, coaching réseaux : tout ce qu'il te faut pour t'installer au Canada.">
 <meta property="og:url" content="https://www.soufdna.com/bons-plans.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Mono:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#0B0B0B;--red:#D93F2E;--white:#FAFAF8;--mid:#5A5A5A;--border:rgba(255,255,255,0.08);--card:rgba(255,255,255,0.02)}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;line-height:1.7}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:rgba(11,11,11,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--white);text-decoration:none}
-.nav-logo span{color:var(--red)}
-.nav-back{font-size:9px;letter-spacing:.15em;color:var(--mid);text-decoration:none;text-transform:uppercase;transition:color .25s}
-.nav-back:hover{color:var(--red)}
-.hero{padding:120px 40px 60px;max-width:900px;margin:0 auto}
-.hero-label{font-size:9px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.hero-label::before{content:'';width:20px;height:1px;background:var(--red)}
-h1{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,56px);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:16px}
-h1 em{color:var(--red);font-style:italic}
-.hero-desc{font-size:15px;color:rgba(244,239,230,.55);max-width:560px;margin-bottom:48px;line-height:1.8}
-.pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:64px}
-.pill{font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--border);color:rgba(244,239,230,.5);text-decoration:none;transition:all .25s;background:transparent}
-.pill:hover{border-color:#D93F2E;color:#D93F2E}
-.section{max-width:900px;margin:0 auto 80px;padding:0 40px}
-.section-label{font-size:9px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:20px;height:1px;background:var(--red)}
-.section-title{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:32px;line-height:1.1}
+:root{--encre:#101820;--creme:#F5F3EE;--blanc:#FFFFFF;--red:#D71920;--red2:#B5141B;--gris:#737373;--txt:#4A4A4A;--filet:#DBD6CB;--filetf:rgba(245,243,238,.10);--white:#101820;--mid:#737373;--border:#DBD6CB;--card:#FFFFFF}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--creme);color:#111;font-family:'Lora',serif;line-height:1.7;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:22px 56px;padding-top:calc(22px + env(safe-area-inset-top,0px));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(16,24,32,.94);border-bottom:1px solid var(--filetf)}
+.nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--creme);text-decoration:none}
+.nav-logo span,.footer-logo span{color:var(--red)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:rgba(245,243,238,.5);text-decoration:none;text-transform:uppercase;transition:color .25s}
+.nav-links a:hover,.nav-links a.on{color:var(--creme)}
+.nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:10px 22px;background:var(--red);color:#fff;text-decoration:none;transition:background .25s}
+.nav-cta:hover{background:var(--red2)}
+.hero-wrap{position:relative;background:var(--encre);color:var(--creme);overflow:hidden;margin-bottom:90px}
+.hero-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 80% 30%,rgba(215,25,32,.10) 0%,transparent 65%);pointer-events:none}
+.hero-wrap::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,243,238,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.03) 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);pointer-events:none}
+.hero{position:relative;z-index:2;padding:110px 56px 80px;max-width:1100px;margin:0 auto}
+.hero-label,.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--red);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.hero-label::before,.section-label::before{content:'';width:32px;height:1px;background:var(--red)}
+h1{font-family:'Fraunces',serif;font-size:clamp(46px,7vw,100px);font-weight:700;line-height:.92;letter-spacing:-.03em;color:var(--creme);margin-bottom:30px}
+h1 em{color:var(--red);font-style:italic;font-weight:300}
+.hero-desc{font-size:17px;color:rgba(245,243,238,.68);max-width:560px;margin-bottom:40px;line-height:1.75}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:11px 18px;border:1px solid rgba(245,243,238,.18);color:rgba(245,243,238,.7);text-decoration:none;transition:all .25s}
+.pill:hover{border-color:var(--red);color:#fff;background:var(--red)}
+.section{max-width:1100px;margin:0 auto 90px;padding:0 56px}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(32px,4.2vw,52px);font-weight:700;letter-spacing:-.03em;color:var(--encre);margin-bottom:36px;line-height:1.02}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
 .cards-2{grid-template-columns:repeat(2,1fr)}
-.card{padding:28px 24px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column}
-.card.featured{border-color:rgba(217,63,46,.3);background:rgba(217,63,46,.04)}
-.card-badge{display:inline-block;font-size:8px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;background:#D93F2E;color:#fff;margin-bottom:16px;align-self:flex-start}
-.card-label{font-size:9px;letter-spacing:.2em;color:var(--mid);text-transform:uppercase;margin-bottom:6px}
-.card-title{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2}
-.card-desc{font-size:13px;color:rgba(244,239,230,.55);line-height:1.7;margin-bottom:20px;flex:1}
-.card-price{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:#D93F2E;margin-bottom:6px}
-.card-price-sub{font-size:9px;letter-spacing:.1em;color:var(--mid);text-transform:uppercase;margin-bottom:20px}
-.card-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-.card-features li{font-size:12px;color:rgba(244,239,230,.6);display:flex;gap:8px;line-height:1.5}
-.card-features li::before{content:'-';color:#D93F2E;flex-shrink:0}
-.btn{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:13px 24px;text-decoration:none;transition:all .25s;border:none;font-family:'DM Mono',monospace}
-.btn-red{background:#D93F2E;color:#fff}
-.btn-red:hover{background:#c23325}
-.btn-outline{background:transparent;color:var(--white);border:1px solid var(--border)}
-.btn-outline:hover{border-color:#D93F2E;color:#D93F2E}
-.btn-full{display:block;text-align:center;width:100%}
-.partner-card{padding:32px;background:var(--card);border:1px solid var(--border);display:flex;gap:32px;align-items:center;flex-wrap:wrap}
-.partner-info{flex:1}
-.partner-side{flex-shrink:0;text-align:center;padding:24px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
-.promo-box{background:rgba(217,63,46,.06);border:1px solid rgba(217,63,46,.2);padding:14px 18px;margin-bottom:20px;display:inline-block}
-.divider{width:40px;height:2px;background:var(--red);margin:0 auto 64px}
-footer{border-top:1px solid var(--border);padding:32px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-footer a{font-size:9px;letter-spacing:.15em;color:var(--mid);text-decoration:none;text-transform:uppercase}
-footer a:hover{color:var(--red)}
-@media(max-width:768px){
-  nav{padding:14px 20px}
-  .hero,.section{padding-left:20px;padding-right:20px}
+.card{padding:32px 28px;background:var(--blanc);border:1px solid var(--filet);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .3s}
+.card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.23,1,.32,1)}
+.card:hover{border-color:rgba(215,25,32,.35)}
+.card:hover::after{transform:scaleY(1)}
+.card.featured{background:var(--encre);border-color:var(--encre)}
+.card.featured .card-title,.card.featured .card-price{color:var(--creme)}
+.card.featured .card-desc,.card.featured .card-features li{color:rgba(245,243,238,.7)}
+.card.featured .card-label,.card.featured .card-price-sub{color:rgba(245,243,238,.45)}
+.card-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:5px 10px;background:var(--red);color:#fff;margin-bottom:18px;align-self:flex-start}
+.card-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--gris);text-transform:uppercase;margin-bottom:8px}
+.card-title{font-family:'Fraunces',serif;font-size:24px;font-weight:700;color:var(--encre);margin-bottom:12px;line-height:1.15}
+.card-desc{font-size:14.5px;color:var(--txt);line-height:1.7;margin-bottom:20px;flex:1}
+.card-price{font-family:'Fraunces',serif;font-size:34px;font-weight:700;color:var(--red);margin-bottom:6px;line-height:1}
+.card-price-sub{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--gris);text-transform:uppercase;margin-bottom:22px}
+.card-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:26px}
+.card-features li{font-size:14px;color:var(--txt);display:flex;gap:10px;line-height:1.5}
+.card-features li::before{content:'—';color:var(--red);flex-shrink:0}
+.btn{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:15px 26px;text-decoration:none;transition:all .25s;border:1px solid transparent}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-red:hover{background:var(--red2)}
+.btn-outline{background:transparent;color:var(--encre);border-color:var(--encre)}
+.btn-outline:hover{background:var(--encre);color:var(--creme)}
+.btn-full{display:block;text-align:center;width:100%;margin-top:auto}
+.partner-card{padding:40px;background:var(--blanc);border:1px solid var(--filet);display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.partner-info{flex:1;min-width:260px}
+.partner-side{flex-shrink:0;text-align:center;padding:28px;background:var(--creme);border:1px solid var(--filet)}
+.promo-box{background:var(--creme);border:1px solid var(--filet);border-left:2px solid var(--red);padding:16px 20px;margin-bottom:22px;display:inline-block}
+.divider{width:40px;height:2px;background:var(--red);margin:0 auto 90px}
+footer{background:var(--encre);padding:36px 56px;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--creme);text-decoration:none}
+.footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+.footer-links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;color:rgba(245,243,238,.5);text-decoration:none;text-transform:uppercase}
+.footer-links a:hover{color:var(--red)}
+.footer-copy{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:rgba(245,243,238,.3);text-transform:uppercase}
+@media(max-width:860px){
+  nav{padding:16px 22px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+  .nav-links{display:none}
+  .hero{padding:70px 22px 60px}
+  .section{padding-left:22px;padding-right:22px}
   .cards,.cards-2{grid-template-columns:1fr}
-  .partner-card{flex-direction:column}
-  footer{padding:24px 20px;flex-direction:column;text-align:center}
+  .partner-card{flex-direction:column;align-items:stretch;padding:28px 22px}
+  footer{padding:30px 22px;flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="https://www.soufdna.com" class="nav-logo">SOUF <span>DNA</span></a>
-  <a href="https://www.soufdna.com" class="nav-back">&#8592; Retour au site</a>
+  <a href="/" class="nav-logo">SOUF <span>DNA</span></a>
+  <ul class="nav-links">
+    <li><a href="/#youtube">YouTube</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/bons-plans.html" class="on">Bons Plans</a></li>
+    <li><a href="/#communaute">Communaut&eacute;</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/pack">Le pack</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Collaborer</a>
 </nav>
 
-<div class="hero">
+<div class="hero-wrap"><div class="hero">
   <div class="hero-label">Ressources</div>
   <h1>Mes bons plans<br><em>Canada</em></h1>
   <p class="hero-desc">Tout ce que j'utilise, recommande et propose — pour t'installer au Canada dans les meilleures conditions possible.</p>
   <div class="pills">
-    <a href="#guide" class="pill">📖 Guide Canada</a>
+    <a href="#guide" class="pill">🍁 Préparer mon départ</a>
     <a href="#assurance" class="pill">🛡️ Assurance</a>
     <a href="#holafly" class="pill">📱 eSIM Holafly</a>
     <a href="#reseaux" class="pill">📲 Réseaux sociaux</a>
   </div>
-</div>
+</div></div>
 
-<!-- 01 GUIDE -->
+<!-- 01 PRÉPARER SON DÉPART -->
 <section class="section" id="guide">
-  <div class="section-label">01 — Ressource</div>
-  <div class="section-title">Le Guide d'installation<br>au Canada</div>
-  <div class="cards">
+  <div class="section-label">01 — Ressources Souf DNA</div>
+  <div class="section-title">Pr&eacute;parer ton d&eacute;part<br>au Canada</div>
+  <div class="cards cards-2">
     <div class="card">
-      <div class="card-label">Le Guide</div>
-      <div class="card-title">Guide Canada PDF</div>
-      <div class="card-desc">70 pages de conseils terrain. Banque, logement, emploi, immigration — tout ce que j'aurais voulu savoir avant d'arriver.</div>
-      <div class="card-price">12,99€</div>
-      <div class="card-price-sub">PDF — Accès immédiat</div>
+      <div class="card-label">Gratuit</div>
+      <div class="card-title">La Checklist Canada 2026</div>
+      <div class="card-desc">Savoir quoi faire, et dans quel ordre. La liste que j'aurais aim&eacute; avoir avant mon d&eacute;part en 2021.</div>
+      <div class="card-price">0&nbsp;&euro;</div>
+      <div class="card-price-sub">PDF &mdash; re&ccedil;u par email dans la minute</div>
       <ul class="card-features">
-        <li>70 pages pas à pas : SIN, banque, téléphone</li>
-        <li>Trouver un logement sans se faire piéger</li>
-        <li>Marché de l'emploi & codes du CV canadien</li>
-        <li>Quartiers, budgets, erreurs à éviter</li>
+        <li>27 actions &agrave; cocher, en six &eacute;tapes</li>
+        <li>De la d&eacute;cision aux trente premiers jours</li>
+        <li>Dix pages pens&eacute;es pour &ecirc;tre imprim&eacute;es</li>
       </ul>
-      <a href="https://buy.stripe.com/6oUaEX20l3Pq8BBfvo7Zu0d" target="_blank" class="btn btn-outline btn-full">Acheter &rarr;</a>
+      <a href="/checklist" class="btn btn-outline btn-full">Recevoir la checklist &rarr;</a>
     </div>
     <div class="card featured">
-      <div class="card-badge">Populaire</div>
-      <div class="card-label">Pack Pro</div>
-      <div class="card-title">Guide + Templates</div>
-      <div class="card-desc">Le guide + tous les templates prêts à l'emploi : CV canadien, lettres de motivation, messages LinkedIn.</div>
-      <div class="card-price">19,99€</div>
-      <div class="card-price-sub">PDF + Templates — Accès immédiat</div>
+      <div class="card-badge">Le plus complet</div>
+      <div class="card-label">Canada Action Pack</div>
+      <div class="card-title">Dix outils pour passer &agrave; l'action</div>
+      <div class="card-desc">Des outils qui calculent et des mod&egrave;les pr&ecirc;ts &agrave; remplir, du budget &agrave; ton premier mois sur place.</div>
+      <div class="card-price">79&nbsp;&euro;</div>
+      <div class="card-price-sub">Paiement unique &mdash; acc&egrave;s imm&eacute;diat</div>
       <ul class="card-features">
-        <li>Tout le contenu du Guide</li>
-        <li>Template CV format canadien</li>
-        <li>Templates lettres de motivation</li>
-        <li>Messages LinkedIn prêts à envoyer</li>
+        <li>Calculateur budget et tracker de candidatures</li>
+        <li>CV canadien FR et EN, kit LinkedIn, messages pr&ecirc;ts &agrave; envoyer</li>
+        <li>Kit logement, plan de d&eacute;part 90 jours, premi&egrave;re semaine, plan 30 jours</li>
+        <li><strong style="color:#F5F3EE">Bonus&nbsp;:</strong> le guide Vivre au Canada (69 pages)</li>
       </ul>
-      <a href="https://buy.stripe.com/9B600jeN799K2dd5UO7Zu0e" target="_blank" class="btn btn-red btn-full">Acheter &rarr;</a>
+      <a href="/pack" class="btn btn-red btn-full">D&eacute;couvrir le pack &rarr;</a>
     </div>
-    <div class="card">
-      <div class="card-label">Pack Action</div>
-      <div class="card-title">Guide + Appel Stratégie</div>
-      <div class="card-desc">Le guide complet + un appel visio 1h pour définir ta stratégie d'installation personnalisée.</div>
-      <div class="card-price">59,99€</div>
-      <div class="card-price-sub">PDF + Appel 1h</div>
-      <ul class="card-features">
-        <li>Tout le contenu du Pack Pro</li>
-        <li>Appel visio 1h avec Souf</li>
-        <li>Plan d'action personnalisé</li>
-        <li>Suivi par email 30 jours</li>
-      </ul>
-      <a href="https://buy.stripe.com/3cIfZh48t71C5pp2IC7Zu0f" target="_blank" class="btn btn-outline btn-full">Acheter &rarr;</a>
-    </div>
-  </div>
-  <div style="text-align:center;padding:20px;border:1px solid var(--border);font-size:13px;color:rgba(244,239,230,.5)">
-    📦 Version physique disponible sur <a href="https://amzn.to/4niepFC" target="_blank" style="color:#D93F2E;text-decoration:underline">Amazon</a>
   </div>
 </section>
 
@@ -208,14 +213,14 @@ footer a:hover{color:var(--red)}
   <div class="partner-card">
     <div class="partner-info">
       <div class="card-label" style="margin-bottom:10px">Mon partenaire recommandé</div>
-      <div style="font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:12px">Holafly 🌐</div>
-      <div style="font-size:14px;color:rgba(244,239,230,.6);line-height:1.8;margin-bottom:20px">
+      <div style="font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:var(--encre);margin-bottom:12px">Holafly 🌐</div>
+      <div style="font-size:14px;color:var(--txt);line-height:1.8;margin-bottom:20px">
         La solution que j'utilise pour rester connecté en voyage. Une eSIM qui s'active en quelques minutes, données illimitées dans plus de 170 pays — parfait pour les nouveaux arrivants au Canada.
       </div>
       <div class="promo-box">
         <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--mid);text-transform:uppercase;letter-spacing:.15em;margin-bottom:6px">Code promo exclusif</div>
-        <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#D93F2E;letter-spacing:.1em">SOUFDNA</div>
-        <div style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(244,239,230,.5);margin-top:4px">5% de réduction sur toute eSIM voyage</div>
+        <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#D71920;letter-spacing:.1em">SOUFDNA</div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--txt);margin-top:4px">5% de réduction sur toute eSIM voyage</div>
       </div>
       <br>
       <a href="https://holafly.sjv.io/c/7722623/3856277/24764" target="_blank" class="btn btn-red">Voir les offres Holafly &rarr;</a>
@@ -235,10 +240,10 @@ footer a:hover{color:var(--red)}
 <section class="section" id="reseaux">
   <div class="section-label">04 — Services</div>
   <div class="section-title">Réseaux Sociaux</div>
-  <div style="padding:40px 32px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+  <div style="padding:40px;background:var(--blanc);border:1px solid var(--filet);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
     <div>
-      <div style="font-size:13px;color:rgba(244,239,230,.55);line-height:1.8;max-width:480px;margin-bottom:24px">
-        Community Management pour les marques + Coaching réseaux pour les créateurs débutants. 5 ans d'expérience, 40 000+ abonnés, audience francophone Canada.
+      <div style="font-size:13px;color:var(--txt);line-height:1.8;max-width:480px;margin-bottom:24px">
+        Community Management pour les marques + Coaching réseaux pour les créateurs débutants. 5 ans d'expérience, 58 000+ abonnés, audience francophone Canada.
       </div>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
         <div style="font-size:9px;letter-spacing:.15em;color:var(--mid);text-transform:uppercase">Community Management dès 997€/mois</div>
@@ -252,9 +257,15 @@ footer a:hover{color:var(--red)}
 </section>
 
 <footer>
-  <a href="https://www.soufdna.com">&#8592; Retour au site</a>
-  <a href="https://www.instagram.com/souf_dna/" target="_blank">@souf_dna</a>
-  <a href="mailto:contact@soufdna.com">contact@soufdna.com</a>
+  <a href="/" class="footer-logo">SOUF <span>DNA</span></a>
+  <ul class="footer-links">
+    <li><a href="https://www.instagram.com/souf_dna/" target="_blank">@souf_dna</a></li>
+    <li><a href="mailto:contact@soufdna.com">contact@soufdna.com</a></li>
+    <li><a href="/cgv">CGV</a></li>
+    <li><a href="/mentions-legales">Mentions l&eacute;gales</a></li>
+    <li><a href="/confidentialite">Confidentialit&eacute;</a></li>
+  </ul>
+  <span class="footer-copy">&copy; 2026 SOUF DNA CORP</span>
 </footer>
 
 </body>
