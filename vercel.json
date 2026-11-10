@@ -13,6 +13,26 @@
       ],
       "destination": "/pack",
       "permanent": false
+    },
+    {
+      "source": "/services-reseaux",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services-reseaux.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/concours",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/concours.html",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
